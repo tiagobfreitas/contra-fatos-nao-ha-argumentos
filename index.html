@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Guerra Espiritual - Plataforma Teológica Completa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e74c3c;
+            --light-color: #f5f7fa;
+            --dark-color: #1a252f;
+            --font-title: 'Nunito', sans-serif;
+            --font-text: 'Nunito', sans-serif;
+            --highlight-color: #3498db;
+        }
+        
+        body {
+            font-family: var(--font-text);
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Aprimorado */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px 0 100px 0;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            font-family: var(--font-title);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .header-circle {
+            position: absolute;
+            bottom: -75px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--light-color);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            background-color: white;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .header-circle:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        .header-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Navegação Principal */
+        .main-nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 6px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .dropdown-item {
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-link {
+            color: var(--dark-color);
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-link:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        /* Conteúdo Principal */
+        h1, h2, h3, h4 {
+            font-family: var(--font-title);
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            padding-top: 30px;
+            line-height: 1.3;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-top: 60px;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 15px;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+            margin-top: 40px;
+            color: var(--secondary-color);
+        }
+        
+        h4 {
+            font-size: 1.3rem;
+            margin-top: 30px;
+            color: var(--secondary-color);
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* Seções Especiais */
+        .verse {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--secondary-color);
+            text-align: center;
+            margin: 50px 0;
+            padding: 30px;
+            border-left: 5px solid var(--accent-color);
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-family: var(--font-title);
+            line-height: 1.6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .verse:before {
+            content: '"';
+            position: absolute;
+            font-size: 10rem;
+            color: rgba(231, 76, 60, 0.1);
+            top: -30px;
+            left: 20px;
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .verse strong {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 70px;
+        }
+        
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .media-column {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .media-item {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .media-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        
+        .media-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            max-height: 400px;
+            object-fit: cover;
+            transform: scale(1);
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        
+        .media-item:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+        
+        .media-caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .text-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        .bible-verse {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+        }
+        
+        .bible-verse:before {
+            content: '✝';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: rgba(231, 76, 60, 0.3);
+            font-size: 1.2rem;
+        }
+        
+        .bible-verse p {
+            margin: 0;
+            font-style: italic;
+            color: #333;
+            padding-left: 25px;
+        }
+        
+        .bible-verse strong {
+            color: var(--primary-color);
+            font-style: normal;
+        }
+        
+        ul, ol {
+            padding-left: 25px;
+            line-height: 1.8;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            position: relative;
+        }
+        
+        ul li:before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        ol {
+            counter-reset: item;
+        }
+        
+        ol li {
+            counter-increment: item;
+        }
+        
+        ol li:before {
+            content: counter(item) ".";
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5em;
+            margin-left: -1.5em;
+        }
+        
+        table {
+            width: 100%;
+            margin: 25px 0;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+        
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+        
+        /* Seção de Vídeos Reformulada */
+        .videos-section {
+            margin-top: 80px;
+        }
+        
+        .video-wrapper {
+            display: flex;
+            width: 100%;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .video-description {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+        }
+        
+        .video-description h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.6rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .video-description h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+        
+        .video-description p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .video-player {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-player iframe,
+        .video-player video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Mapa Interativo */
+        .interactive-map {
+            margin: 50px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            background: #f5f5f5;
+        }
+        
+        .base-map {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .map-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .era-btn {
+            padding: 10px 20px;
+            border: none;
+            background: var(--light-color);
+            color: var(--dark-color);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .era-btn.active,
+        .era-btn:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        .map-popup {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 20px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            transform: translateY(10px);
+        }
+        
+        .map-popup.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .popup-title {
+            margin-top: 0;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 10px;
+        }
+        
+        .study-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .study-btn:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Biblioteca Digital */
+        .library-section {
+            margin: 60px 0;
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        
+        .resource-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .resource-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .resource-card:hover .resource-image img {
+            transform: scale(1.05);
+        }
+        
+        .resource-content {
+            padding: 25px;
+        }
+        
+        .resource-title {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .resource-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 0.9rem;
+            margin: 15px 0;
+        }
+        
+        .resource-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-btn:hover {
+            background: var(--accent-color);
+        }
+        
+        /* Footer Aprimorado */
+        footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 100px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-top: 0;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-menu {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .video-wrapper {
+                flex-direction: column;
+            }
+            
+            .map-container {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-circle {
+                width: 120px;
+                height: 120px;
+                bottom: -60px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .content-section {
+                flex-direction: column;
+            }
+            
+            .text-content,
+            .media-column {
+                min-width: 100%;
+            }
+            
+            .verse {
+                font-size: 1.2rem;
+                padding: 20px;
+            }
+            
+            .map-controls {
+                flex-wrap: wrap;
+                justify-content: center;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                transform: none;
+            }
+            
+            .era-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Guerra Espiritual</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#guerra-espiritual" class="nav-link">Guerra Espiritual</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#efesios" class="dropdown-link">Efésios 6:12</a></li>
+                        <li class="dropdown-item"><a href="#armadura" class="dropdown-link">Armadura de Deus</a></li>
+                        <li class="dropdown-item"><a href="#hierarquia" class="dropdown-link">Hierarquia Espiritual</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#anticristo" class="nav-link">Anticristo & 666</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#profecia" class="dropdown-link">Profecias Bíblicas</a></li>
+                        <li class="dropdown-item"><a href="#significado" class="dropdown-link">Significado de 666</a></li>
+                        <li class="dropdown-item"><a href="#historicas" class="dropdown-link">Figuras Históricas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#israel" class="nav-link">Israel Profético</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#aliancas" class="dropdown-link">Alianças Bíblicas</a></li>
+                        <li class="dropdown-item"><a href="#restauracao" class="dropdown-link">Restauração de Israel</a></li>
+                        <li class="dropdown-item"><a href="#jerusalem" class="dropdown-link">Jerusalém Escatológica</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#recursos" class="nav-link">Recursos</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#biblioteca" class="dropdown-link">Biblioteca Digital</a></li>
+                        <li class="dropdown-item"><a href="#videos" class="dropdown-link">Estudos em Vídeo</a></li>
+                        <li class="dropdown-item"><a href="#mapas" class="dropdown-link">Mapas Interativos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header-circle">
+            <img src="img/mestre.png" alt="Símbolo da Fé Cristã">
+        </div>
+        <div class="container">
+            <h1>A Guerra Espiritual</h1>
+            <p>Mateus 4:9<br>Satanás tenta Jesus no deserto "Tudo isto te darei se, prostrado, me adorares"<br> Mateus 4:6-7<br>E disse-lhe: Se tu és o Filho de Deus, lança-te de aqui abaixo; porque está escrito: Que aos seus anjos dará ordens a teu respeito, E tomar-te-ão nas mãos, Para que nunca tropeces com o teu pé em alguma pedra.<br> <br>Disse-lhe Jesus: Também está escrito: Não tentarás o Senhor teu Deus."</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Seção Efésios 6:12 -->
+        <section id="efesios">
+            <div class="verse">
+                "Porque a nossa luta não é contra carne e sangue, mas contra os principados, contra as potestades, contra os dominadores deste mundo tenebroso, contra as forças espirituais do mal nas regiões celestiais."<br>
+                <strong>Efésios 6:12</strong><br><br>
+                
+                Explicação Palavra por Palavra (Hebraico → Português)<br>
+                <table>
+                    <tr>
+                        <th>Hebraico (Transliterado)</th>
+                        <th>Tradução Literal</th>
+                        <th>Significado Teológico</th>
+                    </tr>
+                    <tr>
+                        <td>בָשָׂר וָדָם (basar v'dam)</td>
+                        <td>"Carne e sangue"</td>
+                        <td>Seres humanos (oposição física)</td>
+                    </tr>
+                    <tr>
+                        <td>רָשֻׁיּוֹת (rashuyot)</td>
+                        <td>"Governantes"</td>
+                        <td>Principados (hierarquia demoníaca)</td>
+                    </tr>
+                    <tr>
+                        <td>שִׁלְטוֹנוֹת (shiltonot)</td>
+                        <td>"Autoridades"</td>
+                        <td>Potestades (poderes delegados)</td>
+                    </tr>
+                    <tr>
+                        <td>מוֹשְׁלֵי חֹשֶׁךְ (moshelei choshekh)</td>
+                        <td>"Dominadores das trevas"</td>
+                        <td>Influência sobre sistemas mundanos</td>
+                    </tr>
+                    <tr>
+                        <td>כֹּחוֹת רוּחָנִיּוֹת רָעוֹת (koach ruchaniyot ra'ot)</td>
+                        <td>"Forças espirituais do mal"</td>
+                        <td>Demônios organizados</td>
+                    </tr>
+                    <tr>
+                        <td>בַּמְּרוֹמִים (ba'meromim)</td>
+                        <td>"Nas regiões celestiais"</td>
+                        <td>Dimensão espiritual acima do natural</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="content-section">
+                <div class="text-content">
+                    <h2 id="guerra-espiritual">O Significado Profundo da Guerra Espiritual</h2>
+                    <p>Este versículo nos revela a verdadeira natureza da batalha que enfrentamos como cristãos. Não se trata de conflitos humanos ou disputas terrenas, mas de uma realidade espiritual que está por trás de muitas das lutas que vemos no mundo.</p>
+                    
+                    <div class="bible-verse">
+                        <p><strong>2 Coríntios 10:3-5</strong><br>
+                        "Porque, embora andando na carne, não militamos segundo a carne. Porque as armas da nossa milícia não são carnais, mas sim poderosas em Deus para destruição das fortalezas; destruindo os conselhos, e toda a altivez que se levanta contra o conhecimento de Deus, e levando cativo todo o entendimento à obediência de Cristo."</p>
+                    </div>
+                    
+                    <h3 id="armadura">A Armadura de Deus: Proteção Completa</h3>
+                    <p>No contexto completo de Efésios 6:10-18, Paulo nos exorta a vestir toda a armadura de Deus para podermos resistir nos dias maus. Cada peça representa um aspecto crucial da nossa defesa espiritual:</p>
+                    <ul>
+                        <li><strong>Cinto da Verdade</strong> (ἀλήθεια - alētheia): A verdade como fundamento que sustenta todas as outras peças</li>
+                        <li><strong>Couraça da Justiça</strong> (δικαιοσύνη - dikaiosynē): A justiça imputada por Cristo e praticada na vida diária</li>
+                        <li><strong>Calçado do Evangelho da Paz</strong> (εἰρήνη - eirēnē): Prontidão para proclamar as boas novas em qualquer situação</li>
+                        <li><strong>Escudo da Fé</strong> (πίστις - pistis): Proteção contra os dardos inflamados (setas incendiárias) do maligno</li>
+                        <li><strong>Capacete da Salvação</strong> (σωτηρία - sōtēria): Segurança da nossa redenção que protege a mente</li>
+                        <li><strong>Espada do Espírito</strong> (μάχαιρα - machaira): A Palavra de Deus como única arma ofensiva</li>
+                    </ul>
+                    
+                    <h3 id="hierarquia">Hierarquia das Forças Espirituais</h3>
+                    <p>Paulo identifica quatro níveis de forças espirituais das trevas em Efésios 6:12:</p>
+                    <ol>
+                        <li><strong>Principados</strong> (ἀρχαί - archai): Governantes espirituais de alto nível que influenciam nações e sistemas</li>
+                        <li><strong>Potestades</strong> (ἐξουσίαι - exousiai): Autoridades espirituais que operam em regiões e estruturas</li>
+                        <li><strong>Dominadores deste mundo tenebroso</strong> (κοσμοκράτορες - kosmokratores): Forças que influenciam sistemas mundanos e culturais</li>
+                        <li><strong>Forças espirituais do mal nas regiões celestiais</strong> (πνευματικά - pneumatika): Exércitos demoníacos organizados que atuam na dimensão espiritual</li>
+                    </ol>
+                </div>
+                
+                <div class="media-column">
+                    <div class="media-item">
+                        <img src="img/armadura.png" alt="Armadura de Deus">
+                        <div class="media-caption">Representação artística da Armadura de Deus descrita em Efésios 6</div>
+                    </div>
+                    
+                    <div class="media-item">
+                        <img src="img/caminho.png" alt="Hierarquia Espiritual">
+                        <div class="media-caption">Jesus é o Único Caminho para Deus</div>
+                    </div>
+                    
+                    <div class="media-item">
+                        <h3>Recursos de Estudo</h3>
+                        <ul>
+                            <li><a href="#">Comentário Expositivo de Efésios - John MacArthur</a></li>
+                            <li><a href="#">A Batalha Invisível - Michael Heiser</a></li>
+                            <li><a href="#">Dicionário de Termos Gregos do Novo Testamento</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Anticristo e 666 -->
+        <section id="anticristo">
+            <div class="content-section">
+                <div class="text-content">
+                    <h2>O Anticristo e o Número 666 na Profecia Bíblica</h2>
+                    
+                    <h3 id="profecia">1. O Conceito do Anticristo nas Escrituras</h3>
+                    <p>As Escrituras apresentam o Anticristo como uma figura de oposição a Cristo que surgirá nos últimos tempos, com características específicas:</p>
+                    
+                    <div class="bible-verse">
+                        <p><strong>1 João 2:18,22</strong><br>
+                        "Filhinhos, é já a última hora; e, como ouvistes que vem o anticristo, também agora muitos se têm feito anticristos... Quem é o mentiroso, senão aquele que nega que Jesus é o Cristo? Esse mesmo é o anticristo, esse que nega o Pai e o Filho."</p>
+                    </div>
+                    
+                    <div class="bible-verse">
+                        <p><strong>2 João 1:7</strong><br>
+                        "Porque já muitos enganadores entraram no mundo, os quais não confessam que Jesus Cristo veio em carne. Tal é o enganador e o anticristo."</p>
+                    </div>
+                    
+                    <h4>Características Principais do Anticristo:</h4>
+                    <table>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Referência Bíblica</th>
+                            <th>Manifestação</th>
+                        </tr>
+                        <tr>
+                            <td>Negador de Cristo</td>
+                            <td>1 João 2:22</td>
+                            <td>Rejeição da divindade de Jesus</td>
+                        </tr>
+                        <tr>
+                            <td>Enganador</td>
+                            <td>2 João 1:7</td>
+                            <td>Falsos milagres e sinais</td>
+                        </tr>
+                        <tr>
+                            <td>Blasfemador</td>
+                            <td>Apocalipse 13:5-6</td>
+                            <td>Oposição direta a Deus</td>
+                        </tr>
+                        <tr>
+                            <td>Governante mundial</td>
+                            <td>Daniel 7:23-25</td>
+                            <td>Controle político e econômico</td>
+                        </tr>
+                        <tr>
+                            <td>Perseguidor</td>
+                            <td>Apocalipse 13:7</td>
+                            <td>Opressão aos santos</td>
+                        </tr>
+                    </table>
+                    
+                    <h3 id="historicas">2. Figuras Pré-Anticristo na História</h3>
+                    <p>A Bíblia apresenta várias figuras que prefiguram o Anticristo final:</p>
+                    <ul>
+                        <li><strong>Antíoco Epifânio</strong> (Daniel 8:23-25; 11:21-35) - Perseguidor dos judeus no período intertestamentário</li>
+                        <li><strong>Nero César</strong> - Perseguidor dos cristãos no primeiro século (possível referência em Apocalipse)</li>
+                        <li><strong>Besta que emerge do mar</strong> (Apocalipse 13:1-10) - Representação do poder político anticristão</li>
+                        <li><strong>Besta que emerge da terra</strong> (Apocalipse 13:11-18) - Representação do poder religioso falso</li>
+                    </ul>
+                </div>
+                
+                <div class="text-content">
+                    <h3>3. A Besta do Apocalipse</h3>
+                    <p>Apocalipse 13 descreve a manifestação final do Anticristo em detalhes impressionantes:</p>
+                    
+                    <div class="bible-verse">
+                        <p><strong>Apocalipse 13:5-6</strong><br>
+                        "Foi-lhe dada uma boca que proferia arrogâncias e blasfêmias... e abriu a boca em blasfêmias contra Deus, para blasfemar do seu nome, e do seu tabernáculo, e dos que habitam no céu."</p>
+                    </div>
+                    
+                    <h4>Atributos da Besta:</h4>
+                    <ul>
+                        <li>Poder político absoluto (7 cabeças = 7 reinos)</li>
+                        <li>Autoridade satânica (dragão dá seu poder à besta)</li>
+                        <li>Adoração exigida (culto imperial)</li>
+                        <li>Perseguição aos santos (guerra contra os fiéis)</li>
+                        <li>Controle econômico (marca da besta)</li>
+                    </ul>
+                    
+                    <h3 id="significado">4. O Número 666 - Marca da Besta</h3>
+                    <div class="bible-verse">
+                        <p><strong>Apocalipse 13:16-18</strong><br>
+                        "A todos, pequenos e grandes, ricos e pobres, livres e escravos, faz que lhes seja dada certa marca sobre a mão direita ou sobre a fronte... O número dela é seiscentos e sessenta e seis."</p>
+                    </div>
+                    
+                    <h4>Interpretações do Número 666:</h4>
+                    <table>
+                        <tr>
+                            <th>Abordagem</th>
+                            <th>Explicação</th>
+                            <th>Evidências</th>
+                        </tr>
+                        <tr>
+                            <td>Gematria</td>
+                            <td>Sistema de valor numérico de letras</td>
+                            <td>Nero César (נרון קסר) em hebraico = 666</td>
+                        </tr>
+                        <tr>
+                            <td>Simbolismo</td>
+                            <td>Número imperfeito (7-1=6, repetido)</td>
+                            <td>Representa falsa trindade (6-6-6 vs 7-7-7)</td>
+                        </tr>
+                        <tr>
+                            <td>Futura</td>
+                            <td>Identificação literal do último Anticristo</td>
+                            <td>Nome ou título que soma 666 no futuro</td>
+                        </tr>
+                        <tr>
+                            <td>Manuscritos</td>
+                            <td>Variação textual (616 em alguns manuscritos)</td>
+                            <td>Papiro 115 (3o século) mostra 616</td>
+                        </tr>
+                    </table>
+                    
+                    <h4>Possíveis Manifestações Modernas:</h4>
+                    <ul>
+                        <li>Tecnologias de identificação digital</li>
+                        <li>Sistemas de controle econômico global</li>
+                        <li>Fusão de poder político-religioso</li>
+                        <li>Inteligência Artificial como "imagem da besta"</li>
+                    </ul>
+                </div>
+                
+                <div class="media-column">
+                    <div class="media-item">
+                        <img src="img/visaoapocaliptica.png" alt="Visão apocalíptica">
+                        <div class="media-caption">1. Contexto Imediato (Apocalipse 13)
+A Besta que emerge do mar (v.1-10):
+
+7 cabeças e 10 chifres: Simbolizam poder político opressor (Daniel 7:24).
+
+Ferida mortal curada (v.3): Paródia da ressurreição de Cristo.
+
+Blasfêmias (v.5-6): Afirma ser divina ("contra Deus, seu nome e seu tabernáculo").
+
+A Besta que emerge da terra (v.11-17):
+
+Falso profeta: Promove culto à primeira besta (v.12) e opera sinais enganadores (v.13-14).
+
+Marca da besta (666): Exigida para transações econômicas (v.17).
+
+2. Significado Teológico Profundo
+Tríade do mal:
+
+Figura	Função	Paralelo divino
+Dragão (Ap 12:3)	Poder satânico	Deus Pai
+1ª Besta (Ap 13:1)	Poder político anticristão	Cristo
+2ª Besta (Ap 13:11)	Poder religioso enganador	Espírito Santo
+666: Representa a usurpação da autoridade divina (7 é perfeição; 6 é falha humana elevada ao extremo).
+
+3. Cumprimento Histórico
+Século I:
+
+Culto imperial romano: Exigia adoração a César como "Senhor" (ex.: Nero, Domiciano).
+
+Perseguição: Quem se recusasse a adorar a besta era morto (Ap 13:15).
+
+Séculos posteriores:
+
+Papado medieval: Reformadores como Lutero associaram 666 ao papado (interpretação controversa).
+
+Totalitarismos: Nazismo e comunismo como sistemas que exigiam lealdade absoluta.
+
+4. Projeção Escatológica
+Últimos dias:
+
+Sistema global: Economia controlada (Ap 13:17 → "comprar ou vender").
+
+Tecnologia: Biochips, IA ou moedas digitais como possíveis veículos da marca.
+
+Advertência: Quem recebe a marca "beberá do vinho da ira de Deus" (Ap 14:9-10).
+
+5. Chave Hermenêutica
+"Aqui há sabedoria" (Ap 13:18):
+
+Não é um código para decifrar nomes, mas um princípio espiritual:
+
+"O conflito final não será entre esquerda e direita, mas entre adoração ao Criador e submissão ao sistema anticristão."
+
+Solução: "Os que guardam os mandamentos de Deus e a fé em Jesus" (Ap 14:12).
+
+🎨 Ilustração Prática
+Imagine um futuro onde:
+
+Um líder carismático unifica nações em crise (Ap 17:12-13).
+
+Um sistema digital rastreia cidadãos (como o "crédito social" chinês).
+
+Cristãos são excluídos do mercado por recusarem a adoração ao sistema.
+
+Isso encapsula a visão apocalíptica de 666.</div>
+                    </div>
+                    <div class="media-item">
+                        <img src="img/666.png" alt="Símbolo 666">
+                        <div class="media-caption">1. Interpretação Literal (Gematria)
+Contexto: No mundo antigo, letras tinham valores numéricos (gregos/hebraicos).
+
+Nero César (século I d.C.):
+
+Em hebraico: נרון קסר (Neron Kesar)
+
+Cálculo: נ (50) + ר (200) + ו (6) + נ (50) + ק (100) + ס (60) + ר (200) = 666
+
+Corrobora a visão de que João estaria criticando o imperador romano, perseguidor dos cristãos.
+
+Variação 616:
+
+Alguns manuscritos antigos (como o Papiro 115) trazem 616 em vez de 666.
+
+Corresponde à versão latina do nome "Nero" sem o "n" final (Nero Caesar → נרו קסר).
+
+2. Interpretação Simbólica
+Tríplice imperfeição:
+
+6 é um dígito abaixo do 7 (número da perfeição divina).
+
+666 representa:
+
+Uma falsa trindade (Pai, Filho, Espírito Santo → 777 vs. Dragão, Besta, Falso Profeta → 666).
+
+Tentativa humana de imitar a perfeição divina (Apocalipse 13:4: "Quem é semelhante à besta?").
+
+3. Interpretação Escatológica (Futurista)
+Anticristo do fim dos tempos:
+
+O número seria um código para identificar um líder global futuro:
+
+Sistema econômico: Marcas digitais, criptomoedas ou IA (Apocalipse 13:17).
+
+Nomes modernos: Alguns tentam calcular valores numéricos de nomes como "VICARIUS FILII DEI" (título papal) ou nomes de políticos, mas sem consenso teológico.
+
+4. Interpretação Histórica
+Figuras associadas ao 666:
+
+Imperadores romanos: Calígula, Domiciano (perseguidores da Igreja).
+
+Napoleão Bonaparte: Alguns cálculos numerológicos o ligam ao 666.
+
+Hitler e Stalin: Associados por suas perseguições religiosas.
+
+5. Interpretação Prática
+Aplicação atual:
+
+Alerta espiritual: O número simboliza sistemas anticristãos (Apocalipse 13:3: "Todo o mundo se maravilhou após a besta").
+
+Discernimento: O texto enfatiza "sabedoria" para interpretar (Apocalipse 13:18).
+
+📚 Fontes Confiáveis para estudo:
+Comentário de Apocalipse (D.A. Carson)
+
+"O Fim dos Tempos" (David Jeremiah)
+
+"666: O Número da Besta" (Estudos da Sociedade Bíblica do Brasil).</div>
+                    </div>
+                    <div class="media-item">
+                        <h3>Estudos Relacionados</h3>
+                        <ul>
+                            <li><a href="#">Escatologia Bíblica - Panorama Completo</a></li>
+                            <li><a href="#">Profecia de Daniel - Cumprimento Histórico e Futuro</a></li>
+                            <li><a href="#">Sinais dos Tempos - Análise Contemporânea</a></li>
+                            <li><a href="#">O Anticristo na História da Igreja</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Israel Profético -->
+        <section id="israel">
+            <div class="content-section">
+                <div class="text-content">
+                    <h2>Israel: A Terra Prometida por Deus</h2>
+                    
+                    <h3 id="aliancas">1. As Alianças Bíblicas com Israel</h3>
+                    <p>A Bíblia apresenta sete alianças principais que estabelecem o relacionamento de Deus com Israel:</p>
+                    
+                    <div class="bible-verse">
+                        <p><strong>Gênesis 12:7</strong><br>
+                        "O Senhor apareceu a Abraão e disse: À tua descendência darei esta terra."</p>
+                    </div>
+                    
+                    <h4>As Sete Alianças:</h4>
+                    <table>
+                        <tr>
+                            <th>Aliança</th>
+                            <th>Referência</th>
+                            <th>Promessas Principais</th>
+                        </tr>
+                        <tr>
+                            <td>Edênica</td>
+                            <td>Gn 1-3</td>
+                            <td>Domínio sobre a criação, semente da mulher</td>
+                        </tr>
+                        <tr>
+                            <td>Noética</td>
+                            <td>Gn 9</td>
+                            <td>Preservação da humanidade, ordem natural</td>
+                        </tr>
+                        <tr>
+                            <td>Abraâmica</td>
+                            <td>Gn 12,15,17</td>
+                            <td>Terra, descendência, bênção universal</td>
+                        </tr>
+                        <tr>
+                            <td>Mosaica</td>
+                            <td>Êx 19-24</td>
+                            <td>Lei como padrão, sacerdócio, sacrifícios</td>
+                        </tr>
+                        <tr>
+                            <td>Palestina</td>
+                            <td>Dt 30</td>
+                            <td>Posse permanente da terra condicional</td>
+                        </tr>
+                        <tr>
+                            <td>Davídica</td>
+                            <td>2Sm 7</td>
+                            <td>Dinastia eterna, trono permanente</td>
+                        </tr>
+                        <tr>
+                            <td>Nova Aliança</td>
+                            <td>Jr 31</td>
+                            <td>Transformação interior, perdão completo</td>
+                        </tr>
+                    </table>
+                    
+                    <h3 id="restauracao">2. Restauração Profética de Israel</h3>
+                    <p>As Escrituras contêm numerosas promessas sobre a restauração final de Israel:</p>
+                    
+                    <div class="bible-verse">
+                        <p><strong>Ezequiel 36:24</strong><br>
+                        "Tomar-vos-ei dentre as nações, e vos congregarei de todos os países, e vos levarei para a vossa própria terra."</p>
+                    </div>
+                    
+                    <div class="bible-verse">
+                        <p><strong>Amós 9:14-15</strong><br>
+                        "Mudarei a sorte do meu povo Israel... e os plantarei na sua terra, e nunca mais serão arrancados da sua terra que lhes dei."</p>
+                    </div>
+                    
+                    <h4>Etapas da Restauração:</h4>
+                    <ol>
+                        <li>Retorno físico à terra (século 20)</li>
+                        <li>Reconhecimento nacional (1948)</li>
+                        <li>Reconquista de Jerusalém (1967)</li>
+                        <li>Conversão espiritual (Zacarias 12:10)</li>
+                        <li>Reino messiânico (Apocalipse 20)</li>
+                    </ol>
+                </div>
+                
+                <div class="text-content">
+                    <h3 id="jerusalem">3. Jerusalém na Profecia Bíblica</h3>
+                    <p>Jerusalém ocupa lugar central no plano divino, mencionada mais de 800 vezes nas Escrituras:</p>
+                    
+                    <div class="bible-verse">
+                        <p><strong>Salmo 132:13-14</strong><br>
+                        "O Senhor elegeu a Sião; desejou-a para sua habitação, dizendo: Este é o meu repouso para sempre; aqui habitarei, pois o desejei."</p>
+                    </div>
+                    
+                    <h4>Eventos Proféticos Relacionados:</h4>
+                    <ul>
+                        <li>Reunião das nações contra Jerusalém (Zacarias 12:3)</li>
+                        <li>Revelação do Messias (Zacarias 12:10)</li>
+                        <li>Templo reconstruído (2 Tessalonicenses 2:4)</li>
+                        <li>Capital do reino milenar (Zacarias 14:16)</li>
+                    </ul>
+                    
+                    <h3>4. Controvérsias Modernas</h3>
+                    <p>O status de Jerusalém continua sendo um dos pontos mais controversos na geopolítica atual:</p>
+                    <ul>
+                        <li>Reconhecimento internacional</li>
+                        <li>Status do Monte do Templo</li>
+                        <li>Direitos históricos e arqueológicos</li>
+                        <li>Implicações escatológicas</li>
+                    </ul>
+                    
+                    <div class="bible-verse">
+                        <p><strong>Zacarias 2:12</strong><br>
+                        "O Senhor possuirá a Judá como sua porção na terra santa, e tornará a escolher Jerusalém."</p>
+                    </div>
+                </div>
+                
+                <div class="media-column">
+                    <div class="media-item">
+                        <img src="img/MapaIsrael.png" alt="Mapa da Terra de Israel">
+                        <div class="media-caption">Mapa bíblico da Terra Prometida mostrando fronteiras históricas</div>
+                    </div>
+                    <div class="media-item">
+                        <img src="img/mapa2.png" alt="Jerusalém">
+                        <div class="media-caption">Jerusalém, cidade escolhida por Deus como centro do mundo</div>
+                    </div>
+                    <div class="media-item">
+                        <h3>Recursos Adicionais</h3>
+                        <ul>
+                            <li><a href="#">Cronologia Profética de Israel</a></li>
+                            <li><a href="#">Arqueologia Bíblica em Jerusalém</a></li>
+                            <li><a href="#">O Monte do Templo na Escatologia</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mapa Interativo de Israel -->
+            <div class="interactive-map">
+                <h2>Mapa Interativo: Israel nas Profecias</h2>
+                <div class="map-container">
+                    <img src="img/israel-base-map.jpg" alt="Mapa de Israel" class="base-map">
+                    
+                    <!-- Camadas interativas seriam controladas por JavaScript -->
+                    <div class="map-controls">
+                        <button class="era-btn active" data-era="biblical">Tempos Bíblicos</button>
+                        <button class="era-btn" data-era="roman">Período Romano</button>
+                        <button class="era-btn" data-era="modern">Israel Moderno</button>
+                        <button class="era-btn" data-era="prophetic">Fronteiras Proféticas</button>
+                    </div>
+                    
+                    <div class="map-popup">
+                        <h3 class="popup-title">Jerusalém</h3>
+                        <div class="popup-content">
+                            <p><strong>Significado:</strong> "Cidade da Paz"</p>
+                            <p><strong>Primeira menção:</strong> Gênesis 14:18</p>
+                            <p><strong>Profecia:</strong> Zacarias 14:4</p>
+                            <button class="study-btn" data-ref="jerusalem">Estudo Completo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Recursos -->
+        <section id="recursos">
+            <div class="library-section">
+                <h2 id="biblioteca">Biblioteca Digital</h2>
+                <p>Explore nossa coleção de recursos teológicos cuidadosamente selecionados para seu estudo e crescimento espiritual.</p>
+                
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="img/livro1.jpg" alt="Comentário Bíblico">
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">Comentário Expositivo de Efésios</h3>
+                            <div class="resource-meta">
+                                <span>John MacArthur</span>
+                                <span>520 páginas</span>
+                            </div>
+                            <p>Análise versículo por versículo com aplicações práticas para a vida cristã.</p>
+                            <a href="#" class="resource-btn">Acessar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="img/livro2.jpg" alt="Estudo Escatológico">
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">O Fim dos Tempos</h3>
+                            <div class="resource-meta">
+                                <span>David Jeremiah</span>
+                                <span>380 páginas</span>
+                            </div>
+                            <p>Guia completo sobre as profecias bíblicas e seu significado hoje.</p>
+                            <a href="#" class="resource-btn">Acessar</a>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="img/livro3.jpg" alt="Dicionário Teológico">
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">Dicionário de Termos Bíblicos</h3>
+                            <div class="resource-meta">
+                                <span>Vários Autores</span>
+                                <span>720 páginas</span>
+                            </div>
+                            <p>Definições detalhadas de palavras hebraicas e gregas com exemplos.</p>
+                            <a href="#" class="resource-btn">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção de Vídeos -->
+            <div class="videos-section">
+                <h2 id="videos">Estudos em Vídeo</h2>
+                <p>Assista a aulas profundas com os maiores especialistas em teologia e estudos bíblicos.</p>
+                
+                <!-- Vídeo 1 -->
+                <div class="video-wrapper">
+                    <div class="video-description">
+                        <h3>1. O anti-Cristo já está entre nós</h3>
+                        <p>Estudo completo sobre as características do Anticristo segundo as Escrituras e como discernir os espíritos anticristãos que já atuam no mundo. Este vídeo aborda:</p>
+                        <ul>
+                            <li>Definição bíblica do termo "Anticristo"</li>
+                            <li>Diferença entre o espírito do Anticristo e a figura escatológica</li>
+                            <li>Análise de 1 João 2:18,22 e 2 João 1:7</li>
+                            <li>Manifestações contemporâneas do anticristianismo</li>
+                        </ul>
+                        <p><strong>Duração:</strong> 45 minutos | <strong>Professor:</strong> Dr. Michael Brown</p>
+                    </div>
+                    
+					<div class="video-player">
+	<iframe 
+        src="https://drive.google.com/file/d/1j-krdquNG20AkZ8fpxaDknv4FtyhCPJU/view?usp=drive_link" 
+        width="100%" 
+        height="100%" 
+        allow="autoplay" 
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+                </div>
+                
+                <!-- Vídeo 2 -->
+                <div class="video-wrapper">
+                    <div class="video-description">
+                        <h3>2. Efésios 6:12 explicado - Hierarquia Espiritual</h3>
+                        <p>Análise profunda do significado de "Porque a nossa luta não é contra carne e sangue, mas contra os principados, contra as potestades, contra os dominadores deste mundo tenebroso, contra as forças espirituais do mal nas regiões celestiais."</p>
+                        <p>O Dr. Heiser, especialista em hebraico e antigo Oriente Médio, explica:</p>
+                        <ul>
+                            <li>O significado original dos termos gregos</li>
+                            <li>O contexto histórico-cultural da passagem</li>
+                            <li>Aplicação prática para os dias atuais</li>
+                            <li>Como orar contra essas forças espirituais</li>
+                        </ul>
+                        <p><strong>Duração:</strong> 52 minutos | <strong>Professor:</strong> Dr. Michael Heiser</p>
+                    </div>
+                    <div class="video-player">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <!-- Vídeo 3 -->
+                <div class="video-wrapper">
+                    <div class="video-description">
+                        <h3>3. A armadura de Deus na prática</h3>
+                        <p>Mensagem prática sobre como vestir diariamente a armadura de Deus descrita em Efésios 6:10-18. O Pr. Washer aborda cada peça com profundidade teológica e aplicação prática:</p>
+                        <ul>
+                            <li><strong>Cinto da Verdade:</strong> Fundamentação na Palavra</li>
+                            <li><strong>Couraça da Justiça:</strong> Santificação prática</li>
+                            <li><strong>Calçado do Evangelho:</strong> Prontidão missionária</li>
+                            <li><strong>Escudo da Fé:</strong> Defesa contra dúvidas</li>
+                            <li><strong>Capacete da Salvação:</strong> Segurança em Cristo</li>
+                            <li><strong>Espada do Espírito:</strong> Uso estratégico da Bíblia</li>
+                        </ul>
+                        <p><strong>Duração:</strong> 38 minutos | <strong>Professor:</strong> Pr. Paul Washer</p>
+                    </div>
+                    <div class="video-player">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mapa Interativo -->
+            <div id="mapas" class="interactive-map">
+                <h2>Mapas Bíblicos Interativos</h2>
+                <p>Explore a geografia sagrada através de nossos mapas interativos com camadas históricas e proféticas.</p>
+                
+                <div class="map-container">
+                    <img src="img/israel-base-map.jpg" alt="Mapa de Israel" class="base-map">
+                    
+                    <div class="map-controls">
+                        <button class="era-btn active" data-era="biblical">Tempos Bíblicos</button>
+                        <button class="era-btn" data-era="roman">Período Romano</button>
+                        <button class="era-btn" data-era="modern">Israel Moderno</button>
+                        <button class="era-btn" data-era="prophetic">Fronteiras Proféticas</button>
+                    </div>
+                    
+                    <div class="map-popup">
+                        <h3 class="popup-title">Jerusalém</h3>
+                        <div class="popup-content">
+                            <p><strong>Significado:</strong> "Cidade da Paz"</p>
+                            <p><strong>Primeira menção:</strong> Gênesis 14:18</p>
+                            <p><strong>Importância:</strong> Capital eterna de Israel</p>
+                            <p><strong>Profecia:</strong> Zacarias 14:4</p>
+                            <button class="study-btn" data-ref="jerusalem">Estudo Completo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Sobre o Projeto</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Nossa Missão</a></li>
+                    <li><a href="#">Equipe Teológica</a></li>
+                    <li><a href="#">Parceiros</a></li>
+                    <li><a href="#">Credenciais</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Recursos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Biblioteca Digital</a></li>
+                    <li><a href="#">Cursos Online</a></li>
+                    <li><a href="#">Glossário Teológico</a></li>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Suporte Técnico</a></li>
+                    <li><a href="#">Contribuições</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Conecte-se</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+                
+                <h3 style="margin-top: 30px;">Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Assinar</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2025 Plataforma Teológica Guerra Espiritual. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <strong>Tiago Freitas</strong> | Consultoria Teológica: <strong>Dr. Michael Heiser</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para funcionalidades interativas
+        document.addEventListener('DOMContentLoaded', function() {
+            // Controles do Mapa Interativo
+            const eraButtons = document.querySelectorAll('.era-btn');
+            eraButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove a classe active de todos os botões
+                    eraButtons.forEach(btn => btn.classList.remove('active'));
+                    // Adiciona a classe active ao botão clicado
+                    this.classList.add('active');
+                    // Aqui iria a lógica para mudar as camadas do mapa
+                });
+            });
+            
+            // Simulação de pop-up no mapa
+            const studyButtons = document.querySelectorAll('.study-btn');
+            studyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const ref = this.getAttribute('data-ref');
+                    alert(`Estudo sobre ${ref} será carregado em breve!`);
+                });
+            });
+            
+            // Efeito suave para links de navegação
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
